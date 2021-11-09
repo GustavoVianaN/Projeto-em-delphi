@@ -13,11 +13,18 @@ interface
 type 
 
   iPeople = interface
+  
     [ \\ code generate with acess ctlr + shift + g  \\ ]
+    
     \\ function that generate aname of client, is the fundamental pass that create  a class \\
+    
+    
     function Name (Value : String : iPeople) : iPeople;
+    
     function The_Last_name (Value : String) : iPeople;
+    
     function NameFull : String; 
+    
     end;
 
 \\\\\\
@@ -25,67 +32,139 @@ type
 type 
 
   TModelPeople = class(TInterfacedObject, iPeople);
+  
   private 
-    Fnone : String;
-    FThe_Last_name : String;
-    function Name (Value : String : iPeople) : iPeople;
-    function The_Last_name (Value : String) : iPeople;
-    function NameFull : String; 
+  
+  Fnone : String;
+  
+  FThe_Last_name : String;
+  
+  function Name (Value : String : iPeople) : iPeople;
+  
+  function The_Last_name (Value : String) : iPeople;
+  
+  function NameFull : String; 
+  
   public 
-    constructor Create;
-    destructor Destroy; override
-    \\ funcao de lasse que pode ser acessad aantes daclasse ser criada 
-    class function New : iPeople;
-    
+  
+  constructor Create;
+  
+  destructor Destroy; override
+  
+  \\ funcao de lasse que pode ser acessad aantes daclasse ser criada 
+  
+  class function New : iPeople;
+  
+  
+  
   end;
   
-\\ implementation of class \\
+  
+\\
+implementation of class \\
+
+
 
 implementation
 
 
-  { TModelPessoa }
+
+
+
+
+{ TModelPessoa }
+
+
+
 
 
 end.
 
 
+
+
+
 \\\\\\\\\\\\\\\
 
+
+
 \\ classe 2 
+
 constructor TModelPeople.Create;
+
 begin
 
+
+
 end;
+
+
 
 destructor TModelPeople.Destroy;
+
 begin
 
-  inherited;
+
+
+inherited;
+
 end;
+
+
 
 class function TModelPeople.New: iPeople;
+
 begin 
-  Result := Self.Create;
+
+Result := Self.Create;
+
 end;
+
+
 
 function TmodelPeople.name(Value : String) : iPeople;
+
 begin 
-  Result := Self;
-  Fname := Value;
+
+Result := Self;
+
+Fname := Value;
+
 end;
 
+
+
 function TModelPeople.NameFull : String;
+
 begin 
-  Result := Fnone + ' ' + Fthe_Last_name;
+
+Result := Fnone + ' ' + Fthe_Last_name;
+
+
 
 end; 
 
+
+
 function TModelPeople.The_Last_name(Value : String) : iPeople;
 
+
+
 begin 
-  Result := self;
-  FThe_Last_name := Value;
-  
+
+Result := self;
+
+FThe_Last_name := Value;
+
+
+
 end;
+
 \\\\\
+
+
+
+
+
+
+
