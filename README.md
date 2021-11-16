@@ -162,6 +162,13 @@ end;
 
 \\\\\
 
+\\* orientações:
+\\var: declaração de variaveis
+\\Begin será responsável por realizar as instruções
+\\Result é o valor que irá retornar a função em série 
+\\End; função de terminação do código 
+\\Procedure: é como se fosse uma subrotina e não retorna valor nenhum
+
 
 
 
